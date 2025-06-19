@@ -239,14 +239,17 @@
 }
 
 .mostrar-carrito {
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  width: 300px;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  z-index: 999;
   display: none;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  width: 400px;
+  border-radius: 10px;
 }
+
 
