@@ -3,11 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const carrito = document.getElementById("carrito");
   const contenedorCarrito = document.getElementById("productos").querySelector("tbody");
   let TotalCarrito = [];
+  let count = 0;
 
   const buttons = document.querySelectorAll(".btn-dark");
   buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
-      e.preventDefault();
+      count++;
+      const cartCount = document.getElementById('carrito-count');
+      cartCount.textContent = count;
+      cartCount.classList.remove('bump');
+      void cartCount.offsetWidth; 
+      cartCount.classList.add('bump');
       contenedor.style.display = "none";
       const buton = e.target;
       buton.innerHTML = "Producto agregado";
@@ -93,6 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const id = e.target.getAttribute("data-id");
       TotalCarrito = TotalCarrito.filter(producto => producto.id !== id);
       e.target.parentElement.parentElement.remove();
+      count--;
+      const cartCount = document.getElementById('carrito-count'); 
+      cartCount.textContent = count;
+      if (TotalCarrito.length === 0) {
+        contenedor.style.display = "none";
+      }  
     }
   });
 });

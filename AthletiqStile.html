@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +19,7 @@
         <li><a href="#">Mujer</a></li>
         <li><a href="#">Accesorios</a></li>
         <li><a id="carrito">Carrito 🛒</a></li>
+        <span class="carrito-count" id="carrito-count">0</span>
       </ul>
     </nav>
   </header>
@@ -34,7 +34,7 @@
     <a href="#">Streetwear</a>
   </div>
   <section class="hero">
-    <h1>Athletiq and Stile</h1>
+    <h1>Athletic and Style</h1>
     <p class="precio">La fusión perfecta entre estilo urbano juvenil y elegancia clásica.</p>
   </section>
   <div class="container">
@@ -108,8 +108,7 @@
       <section class="novedades">
         <h2>Novedades</h2>
         <p class="precio">Explora nuestra amplia gama de productos que combinan lo mejor del streetwear y la moda clásica.</p>
-        <button class="btn btn-dark">Ver catálogo</button>
-
+        <button class="btn btn-secondary">Ver catálogo</button>
         <div class="novedades-horizontales">
           <div class="bg-white p-3  rounded text-center h-100 d-flex flex-column Producto">
             <img src="./img/camisaLoca.jpg" alt="Oversize T-shirt" class="img-fluid mb-2 ">
@@ -123,14 +122,12 @@
             <p class="precio">$80.000</p>
             <button class="btn btn-dark" id="10">Añadir al carrito</button>
           </div>
-
           <div class="bg-white p-3 rounded text-center h-100 d-flex flex-column Producto">
             <img src="./img/pantalonesc.jpg" alt="Oversize T-shirt" class="img-fluid mb-2 ">
             <h4>Oversize T-shirt</h4>
             <p class="precio">$80.000</p>
             <button class="btn btn-dark" id="11">Añadir al carrito</button>
           </div>
-
           <div class="bg-white p-3  rounded text-center h-100 d-flex flex-column Producto">
             <img src="./img/colgada.jpg" alt="Camisa Off-White" class="img-fluid mb-2 ">
             <h4>Camisa Off-White</h4>
@@ -140,7 +137,6 @@
         </div>
       </section>
       <!-- Carrito -->
-
       <div class="mostrar-carrito container">
         <table id="productos" class="table">
           <thead>
@@ -156,9 +152,7 @@
           </tbody>
         </table>
       </div>
-
       <!-- Cierre Carrito -->
-       
       <!-- Cierre de section novedades -->
       <footer>
         &copy; 2025 Athletiq and Stile. Todos los derechos reservados.
@@ -168,5 +162,4 @@
         crossorigin="anonymous"></script>
       <script src="main.js"></script>
 </body>
-
 </html>
